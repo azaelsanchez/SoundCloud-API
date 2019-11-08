@@ -12,9 +12,13 @@
 </head>
 <body>
     <header>
+            <nav>
         <div class="mt-5 header-tittle">
+            
             <h1>Reproductor SoundCloud</h1>
+        
         </div>
+    </nav>
     </header>
     <section>
         <div class="input-wrapper">
@@ -30,6 +34,9 @@
                     <input id="input-song" type="text" class="form-control" placeholder="Arrastra y se reproducira" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div class="input-group-append">
                         <button id="stream" class="d-flex btn btn-outline-secondary" type="button"><i id="sound" class="material-icons">play_circle_outline</i></button>
+                        <div class="input-group-append">
+                            <button id="paused" class="d-flex btn btn-outline-secondary" type="button"><i id="sound" class="material-icons">pause_circle_outline</i></button>
+                        </div>
                         </div>
                     </div>
                 </div>

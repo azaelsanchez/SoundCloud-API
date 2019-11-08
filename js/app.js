@@ -1,8 +1,11 @@
 $(document).ready(function() {
     let nombres = [];
+    
     SC.initialize({
         client_id: 'aa06b0630e34d6055f9c6f8beb8e02eb',
     });
+
+    
     //Creamos un keypress para el buscador.
     $(document).bind('keypress', function(teclado) {
         if(teclado.keyCode==13){ $('#searchSongs').trigger('click');}
@@ -26,7 +29,7 @@ $(document).ready(function() {
         });
     });
  });
-
+ let myStream = null;
  //Realizamos el Drag y el Drop.
 
  function drag(ev){
@@ -42,11 +45,21 @@ $(document).ready(function() {
     ev.target.value = document.getElementById(data).title;
     let query = data;
     $('#sound').toggleClass('pulse');
-    SC.stream('/tracks/'+ query +'').then(function(player){
+
+    myStream = SC.stream('/tracks/'+ query+'');
+    myStream.then(function(player){
         player.play().then(function(){
             console.log('reproduciendo');
-        }).catch(function(e){
-            console.error('no funciona.', e);
+        }).catch(function(teclado){
+            console.error('no funciona.', teclado);
         });
     });
- }
+
+}
+//funciones de Play(stream) y Pause
+document.getElementById('stream').addEventListener('click', () => {
+    myStream.then(player => player.play());
+});
+document.getElementById('paused').addEventListener('click', () => {
+    myStream.then(player => player.pause());
+});
