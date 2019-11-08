@@ -22,15 +22,32 @@
                 <div class="input-content d-flex">
                     <div class="input-group mb-4">
                         <input id="querySong" type="text" class="form-control" placeholder="Busca tu cancion">
+                        <div class="input-group-append">
                           <button id="searchSongs" class="btn btn-outline-secondary" type="button">Busca</button>
                     </div>
                 </div>
-                
+                <div class="input-group mb-4 m1-3">
+                    <input id="input-song" type="text" class="form-control" placeholder="Arrastra y se reproducira" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="input-group-append">
+                        <button id="stream" class="d-flex btn btn-outline-secondary" type="button"><i id="sound" class="material-icons">play_circle_outline</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="main-content">
+                    <div id="resultado" class="row tittle-content d-flex justify-content-between"></div>
+                </div>
             </div>
         </div>
     </section>
    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
-   <script src="js/jquery-3.4.1.min.js"></script>
+   <script src="js/jquery-3.4.1.min.js"></script>       
    <script src="js/bootstrap.min.js"></script>
    <script src="js/app.js"></script>
 </body>
