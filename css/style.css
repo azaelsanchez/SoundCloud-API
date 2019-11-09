@@ -1,24 +1,34 @@
 
 body {
-    background-color: rgb(250, 249, 196);
+    background: rgb(24, 23, 23);
 }
 
 #stream{
+ 
  color:rgb(104, 224, 104);
 }
 #paused{
     color:red;
 }
+
 #searchSongs{
-    color:black;
+    
+    color:rgb(233, 232, 232);
 }
 h1{
     text-align: center;
+    font:bold 30px Verdana;
+	margin: 0 10px 0 10px;
+	text-decoration:none;
+	color:rgb(255, 255, 255);
+	padding: 10px;
+	border-radius: 10px;
+	transition:  .2s,color 2s;
 }
 h3 {
     text-align: center;
     font-size: 1.3em;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 hr {
@@ -48,13 +58,13 @@ ul {
 .header-title {
     text-align: center;
     padding: 1em;
-    color: #878787;
+    
 }
 
 /* Main Content */
 
 .main-content {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: auto;
     -webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.2);
     -moz-box-shadow:    0px 0px 11px 0px rgba(50, 50, 50, 0.2);
