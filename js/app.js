@@ -56,6 +56,7 @@ $(document).ready(function() {
     });
 
 }
+
 //funciones de Play(stream) y Pause
 document.getElementById('stream').addEventListener('click', () => {
     myStream.then(player => player.play());
