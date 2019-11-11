@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 
     
-    //Creamos un keypress para el buscador.
+    //Creamos un keypress con buscador para usar el enter.
     $(document).bind('keypress', function(teclado) {
         if(teclado.keyCode==13){ $('#searchSongs').trigger('click');}
     });
